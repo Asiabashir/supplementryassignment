@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3D Bar Chart VR</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-entity position="0 1.6 4">
+            <a-camera></a-camera>
+        </a-entity>
+
+        <a-entity id="chart" position="-1 0 -3"></a-entity>
+
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+
+    <script>
+        const data = [
+            [3, 5, 2],
+            [6, 1, 4],
+            [2, 8, 3]
+        ];
+
+        const chart = document.getElementById("chart");
+
+        data.forEach((row, rowIndex) => {
+            row.forEach((value, colIndex) => {
+                const bar = document.createElement("a-box");
+                bar.setAttribute("position", `${colIndex * 1.2} ${value / 2} ${-rowIndex * 1.2}`);
+                bar.setAttribute("depth", "1");
+                bar.setAttribute("width", "1");
+                bar.setAttribute("height", value);
+                bar.setAttribute("color", `#${Math.floor(Math.random()*16777215).toString(16)}`);
+                chart.appendChild(bar);
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
